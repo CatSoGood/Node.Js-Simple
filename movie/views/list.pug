@@ -1,0 +1,36 @@
+// i <tab>
+include ./list-item
+doctype doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-eqiv = "X-UA-Compatible", content ="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Movies
+        // link <tab>
+        link(rel="stylesheet", href="/style.css")
+    body
+    // table>th*4+tr>td*4
+    table 
+        th Id
+        th Title 
+        th Year
+        th 
+        th 
+        - for(let movie of movies)
+            +listItem(movie)
+    a(href="/movie/form/") new
+
+        //-  table 
+        //- th id
+        //- th Title 
+        //- th year
+        //- th 
+        //- - for (let movie of movies)
+        //-     tr 
+        //-     td #(movie.id)
+        //-     td #(movie.title)
+        //-     td #(movie.year)
+        //-     td 
+        //-         // a <tab>
+        //-         a(href="/movie/delete/" + movie.id) delete 
